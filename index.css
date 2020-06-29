@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rokkitt", serif;
+  text-align: center;
+  color: #242f40;
+  height: 100vh;
+  background: url("./img/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  overflow: scroll;
+}
+
+h1 {
+  color: #cca43b;
+  background: #242f40;
+  padding: 10px;
+  width: 110vw;
+  position: relative;
+  left: -5vw;
+  margin: 0 auto 50px auto;
+  font-family: "Poller One", cursive;
+}
+
+h2 {
+  width: min-content;
+  margin: 30px auto;
+  padding: 5px;
+  background: rgba(229, 229, 229, 0.6);
+  border-radius: 5px;
+}
+
+p {
+  padding: 20px;
+  margin: 10px 0;
+  background: linear-gradient(rgba(204, 164, 59, 0), #cca43b 7%, #cca43b 93%, rgba(204, 164, 59, 0));
+  font-size: 1.2rem;
+}
+
+footer {
+  background: #242f40;
+  color: #cca43b;
+}
+
+footer p {
+  background: none;
+}
+
+/*# sourceMappingURL=index.css.map */

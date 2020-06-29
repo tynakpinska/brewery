@@ -1,0 +1,62 @@
+$jet: rgba(54, 54, 54, 1);
+$gunmetal: rgba(36, 47, 64, 1);
+$gold: rgba(204, 164, 59, 1);
+$platinum: rgba(229, 229, 229, 1);
+$white: rgba(255, 255, 255, 1);
+$logo-font:'Poller One', cursive;
+$main-font: 'Rokkitt', serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $main-font;
+    text-align: center;
+    color: $gunmetal;
+    height: 100vh;
+    background: url("./img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    overflow: scroll;
+}
+
+h1 {
+    color: $gold;
+    background: $gunmetal;
+    padding: 10px;
+    width: 110vw;
+    position:relative;
+    left: -5vw;
+    margin: 0 auto 50px auto;
+    font-family: $logo-font;
+}
+
+h2 {
+    width: min-content;
+    margin: 30px auto;
+    padding: 5px;
+    background: rgba(229, 229, 229, .6);
+    border-radius: 5px;
+}
+
+p {
+    padding: 20px;
+    margin: 10px 0;
+    background: linear-gradient(rgba(204, 164, 59, 0), $gold 7%, $gold 93%, rgba(204, 164, 59, 0));
+    font-size: 1.2rem;
+}
+
+footer {
+    background: $gunmetal;
+    color: $gold;
+}
+
+footer p {
+    background: none;
+
+}
