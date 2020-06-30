@@ -26,22 +26,24 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: $gunmetal;
   width: 100vw;
-  padding: 10px;
   position: relative;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   h1 {
     color: $gold;
     font-family: $logo-font;
   }
   nav {
+    position: absolute;
+    left: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    margin: 10px;
     cursor: pointer;
     .link {
       height: 4px;
@@ -50,6 +52,7 @@ header {
       z-index: 1;
       margin-top: 2px;
     }
+
     .link:first-child {
       margin-top: 0;
     }
@@ -115,7 +118,10 @@ footer {
   background: #fff;
   border-radius: 50px;
   p {
+    padding: 40px;
     background: $gold;
+    transition: all .5s ease-in-out;
+    
   }
   img {
     width: auto;

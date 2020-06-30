@@ -18,23 +18,24 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: #242f40;
   width: 100vw;
-  padding: 10px;
   position: relative;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header h1 {
   color: #cca43b;
   font-family: "Poller One", cursive;
 }
 header nav {
+  position: absolute;
+  left: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 10px;
   cursor: pointer;
 }
 header nav .link {
@@ -103,7 +104,9 @@ footer p {
   border-radius: 50px;
 }
 .card-beer p {
+  padding: 40px;
   background: #cca43b;
+  transition: all 0.5s ease-in-out;
 }
 .card-beer img {
   width: auto;
