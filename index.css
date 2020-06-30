@@ -17,15 +17,59 @@ body {
   overflow: scroll;
 }
 
-h1 {
-  color: #cca43b;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #242f40;
+  width: 100vw;
   padding: 10px;
-  width: 110vw;
   position: relative;
-  left: -5vw;
-  margin: 0 auto 50px auto;
+}
+header h1 {
+  color: #cca43b;
   font-family: "Poller One", cursive;
+}
+header nav {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  cursor: pointer;
+}
+header nav .link {
+  height: 4px;
+  width: 30px;
+  background: #cca43b;
+  z-index: 1;
+  margin-top: 2px;
+}
+header nav .link:first-child {
+  margin-top: 0;
+}
+header nav .home {
+  background: #ffef3d;
+}
+header nav .why {
+  background: #e8c838;
+}
+header nav .who {
+  background: #ffcc4a;
+}
+header nav .what {
+  background: #e8a438;
+}
+header nav .where {
+  background: #ff9b3d;
+}
+header nav .contact {
+  background: #f3b071;
+}
+header nav p {
+  display: none;
+}
+header nav:hover {
+  border-radius: 10px;
 }
 
 h2 {
@@ -47,9 +91,24 @@ footer {
   background: #242f40;
   color: #cca43b;
 }
-
 footer p {
   background: none;
+  margin-bottom: 0;
+}
+
+.card-beer {
+  width: 70%;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 50px;
+}
+.card-beer p {
+  background: #cca43b;
+}
+.card-beer img {
+  width: auto;
+  max-height: 70vh;
+  height: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

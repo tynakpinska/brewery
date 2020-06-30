@@ -3,60 +3,123 @@ $gunmetal: rgba(36, 47, 64, 1);
 $gold: rgba(204, 164, 59, 1);
 $platinum: rgba(229, 229, 229, 1);
 $white: rgba(255, 255, 255, 1);
-$logo-font:'Poller One', cursive;
-$main-font: 'Rokkitt', serif;
+$logo-font: "Poller One", cursive;
+$main-font: "Rokkitt", serif;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: $main-font;
-    text-align: center;
-    color: $gunmetal;
-    height: 100vh;
-    background: url("./img/background.jpg") no-repeat center center fixed;
-    background-size: cover;
+  font-family: $main-font;
+  text-align: center;
+  color: $gunmetal;
+  height: 100vh;
+  background: url("./img/background.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .container {
-    overflow: scroll;
+  overflow: scroll;
 }
 
-h1 {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $gunmetal;
+  width: 100vw;
+  padding: 10px;
+  position: relative;
+  h1 {
     color: $gold;
-    background: $gunmetal;
-    padding: 10px;
-    width: 110vw;
-    position:relative;
-    left: -5vw;
-    margin: 0 auto 50px auto;
     font-family: $logo-font;
+  }
+  nav {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    cursor: pointer;
+    .link {
+      height: 4px;
+      width: 30px;
+      background: $gold;
+      z-index: 1;
+      margin-top: 2px;
+    }
+    .link:first-child {
+      margin-top: 0;
+    }
+    .home {
+      background: #ffef3d;
+    }
+    .why {
+      background: #e8c838;
+    }
+    .who {
+      background: #ffcc4a;
+    }
+    .what {
+      background: #e8a438;
+    }
+    .where {
+      background: #ff9b3d;
+    }
+    .contact {
+      background: #f3b071;
+    }
+    p {
+      display: none;
+    }
+  }
+  nav:hover {
+    border-radius: 10px;
+  }
 }
 
 h2 {
-    width: min-content;
-    margin: 30px auto;
-    padding: 5px;
-    background: rgba(229, 229, 229, .6);
-    border-radius: 5px;
+  width: min-content;
+  margin: 30px auto;
+  padding: 5px;
+  background: rgba(229, 229, 229, 0.6);
+  border-radius: 5px;
 }
 
 p {
-    padding: 20px;
-    margin: 10px 0;
-    background: linear-gradient(rgba(204, 164, 59, 0), $gold 7%, $gold 93%, rgba(204, 164, 59, 0));
-    font-size: 1.2rem;
+  padding: 20px;
+  margin: 10px 0;
+  background: linear-gradient(
+    rgba(204, 164, 59, 0),
+    $gold 7%,
+    $gold 93%,
+    rgba(204, 164, 59, 0)
+  );
+  font-size: 1.2rem;
 }
 
 footer {
-    background: $gunmetal;
-    color: $gold;
+  background: $gunmetal;
+  color: $gold;
+  p {
+    background: none;
+    margin-bottom: 0;
+  }
 }
 
-footer p {
-    background: none;
-
+.card-beer {
+  width: 70%;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 50px;
+  p {
+    background: $gold;
+  }
+  img {
+    width: auto;
+    max-height: 70vh;
+    height: auto;
+  }
 }
