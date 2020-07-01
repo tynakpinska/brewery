@@ -9,7 +9,7 @@ body {
   text-align: center;
   color: #242f40;
   height: 100vh;
-  background: url("./img/background.jpg") no-repeat center center fixed;
+  background: url("./img/background-small.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -73,6 +73,17 @@ header nav:hover {
   border-radius: 10px;
 }
 
+.hero {
+  background: rgba(204, 164, 59, 0.3);
+  height: 90vh;
+  color: white;
+  text-shadow: 0 0 5px #242f40;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 h2 {
   width: min-content;
   margin: 30px auto;
@@ -85,6 +96,10 @@ h3 {
   border-bottom: 3px solid #363636;
   width: 50vw;
   margin: 10px auto 2px auto;
+}
+
+.section:not(.what):not(.who) {
+  height: 100vh;
 }
 
 .section-content {
@@ -160,6 +175,13 @@ footer p {
   width: auto;
   max-height: 70vh;
   height: auto;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: url("./img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

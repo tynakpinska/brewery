@@ -17,7 +17,7 @@ body {
   text-align: center;
   color: $gunmetal;
   height: 100vh;
-  background: url("./img/background.jpg") no-repeat center center fixed;
+  background: url("./img/background-small.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -83,6 +83,17 @@ header {
   }
 }
 
+.hero {
+  background: rgba(204, 164, 59, 0.3);
+  height: 90vh;
+  color: white;
+  text-shadow: 0 0 5px $gunmetal;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 h2 {
   width: min-content;
   margin: 30px auto;
@@ -95,6 +106,10 @@ h3 {
   border-bottom: 3px solid $jet;
   width: 50vw;
   margin: 10px auto 2px auto;
+}
+
+.section:not(.what):not(.who) {
+  height: 100vh;
 }
 
 .section-content {
@@ -113,7 +128,6 @@ h3 {
     height: auto;
   }
 }
-
 .person {
   width: 40vw;
   height: 40vw;
@@ -122,15 +136,18 @@ h3 {
 }
 
 .p1 {
-  background: url("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?h=350&auto=compress&cs=tinysrgb") center no-repeat;
+  background: url("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?h=350&auto=compress&cs=tinysrgb")
+    center no-repeat;
   background-size: cover;
 }
 .p2 {
-  background: url("https://images.unsplash.com/photo-1504347538039-a53f6ff0131d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=ca7cc3097e24937904aadfe78b36780c") center no-repeat;
+  background: url("https://images.unsplash.com/photo-1504347538039-a53f6ff0131d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=ca7cc3097e24937904aadfe78b36780c")
+    center no-repeat;
   background-size: cover;
 }
 .p3 {
-  background: url("https://pbs.twimg.com/profile_images/935681507963887616/yn7PKqTT.jpg") center no-repeat;
+  background: url("https://pbs.twimg.com/profile_images/935681507963887616/yn7PKqTT.jpg")
+    center no-repeat;
   background-size: cover;
 }
 
@@ -173,5 +190,12 @@ footer {
     width: auto;
     max-height: 70vh;
     height: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    background: url("./img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
   }
 }
