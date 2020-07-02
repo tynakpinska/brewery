@@ -3,6 +3,7 @@ $gunmetal: rgba(36, 47, 64, 1);
 $gold: rgba(204, 164, 59, 1);
 $platinum: rgba(229, 229, 229, 1);
 $white: rgba(255, 255, 255, 1);
+$rose: rgba(204, 49, 101, 1);
 $logo-font: "Poller One", cursive;
 $main-font: "Rokkitt", serif;
 
@@ -28,6 +29,7 @@ body {
 header {
   background: $gunmetal;
   width: 100vw;
+  height: 10vh;
   position: relative;
   padding: 8px;
   display: flex;
@@ -45,16 +47,34 @@ header {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    svg {
+      display: none;
+      fill: $jet;
+      width: 30px;
+      height: auto;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 2;
+      transition: all 1s ease-in-out;
+    }
     .link {
       height: 4px;
       width: 30px;
       background: $gold;
       z-index: 1;
       margin-top: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in-out;
     }
 
     .link:first-child {
       margin-top: 0;
+    }
+    .link:last-child {
+      margin-bottom: 0;
     }
     .home {
       background: #ffef3d;
@@ -76,6 +96,7 @@ header {
     }
     p {
       display: none;
+      font-size: 2rem;;
     }
   }
   nav:hover {
@@ -100,12 +121,6 @@ h2 {
   padding: 5px;
   background: rgba(229, 229, 229, 0.6);
   border-radius: 5px;
-}
-
-h3 {
-  border-bottom: 3px solid $jet;
-  width: 50vw;
-  margin: 10px auto 2px auto;
 }
 
 .section:not(.what):not(.who) {
@@ -151,6 +166,54 @@ h3 {
   background-size: cover;
 }
 
+.where {
+  h3 {
+    border-top: 3px solid $rose;
+    width: 50vw;
+    margin: 10px auto 2px auto;
+    padding: 10px 0 0 0;
+  }
+}
+
+.contact {
+  h3 {
+    margin-top: 30px;
+  }
+
+  span {
+    color: $rose;
+  }
+  button {
+    background: $rose;
+    border-top: 2px solid #c99eac;
+    border-left: 2px solid #c99eac;
+    border-bottom: 2px solid #c70948;
+    border-right: 2px solid #c70948;
+    color: $gold;
+    font-weight: bolder;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .contact-icons {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  svg {
+    width: 20px;
+    height: auto;
+    fill: $gunmetal;
+    margin: 5px;
+    cursor: pointer;
+  }
+  svg:hover {
+    fill: $rose;
+  }
+}
+
 input {
   width: 60vw;
   border-radius: 5px;
@@ -181,10 +244,9 @@ footer {
   margin: 50px auto;
   background: #fff;
   border-radius: 50px;
-  p {
+  h3 {
     padding: 40px;
     background: $gold;
-    transition: all 0.5s ease-in-out;
   }
   img {
     width: auto;
