@@ -11,6 +11,7 @@ $main-font: "Rokkitt", serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
   background: url("./img/background-small.jpg") no-repeat center center fixed;
   background-size: cover;
 }
+
 
 .container {
   overflow: scroll;
@@ -35,6 +37,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 1s ease-in-out;
 
   h1 {
     color: $gold;
@@ -94,9 +97,13 @@ header {
     .contact {
       background: #f3b071;
     }
-    p {
+    a {
       display: none;
-      font-size: 2rem;;
+      font-size: 2rem;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: $gunmetal;
     }
   }
   nav:hover {

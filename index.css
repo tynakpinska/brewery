@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,6 +27,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 1s ease-in-out;
 }
 header h1 {
   color: #cca43b;
@@ -85,9 +87,13 @@ header nav .where {
 header nav .contact {
   background: #f3b071;
 }
-header nav p {
+header nav a {
   display: none;
   font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #242f40;
 }
 header nav:hover {
   border-radius: 10px;

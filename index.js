@@ -1,4 +1,5 @@
 const nav = document.getElementsByTagName("nav")[0];
+const header = document.getElementsByTagName("header")[0];
 const links = document.querySelectorAll(".link");
 const exitButton = document.querySelector(".fa-times-circle");
 
@@ -25,5 +26,11 @@ const handleExitClick = e => {
   });
 };
 
+const handleScroll = () => {
+    header.style.transform = "translate(0, -10vh)";
+}
+
 nav.addEventListener("click", handleNavClick);
+window.addEventListener("scroll", handleScroll);
 exitButton.addEventListener("click", handleExitClick);
+links.forEach(l => l.addEventListener("click", handleExitClick));
