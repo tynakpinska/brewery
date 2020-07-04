@@ -26,11 +26,33 @@ const handleExitClick = e => {
   });
 };
 
-const handleScroll = () => {
-    header.style.transform = "translate(0, -10vh)";
-}
-
 nav.addEventListener("click", handleNavClick);
-window.addEventListener("scroll", handleScroll);
 exitButton.addEventListener("click", handleExitClick);
 links.forEach(l => l.addEventListener("click", handleExitClick));
+
+const controller = new ScrollMagic.Controller();
+new ScrollMagic.Scene({
+  triggerElement: "#why",
+})
+  .setClassToggle("#why", "fade-in")
+  .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: "#who",
+})
+  .setClassToggle("#who", "fade-in")
+  .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: "#what",
+})
+  .setClassToggle("#what", "fade-in")
+  .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: "#where",
+})
+  .setClassToggle("#where", "fade-in")
+  .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: "#contact",
+})
+  .setClassToggle("#contact", "fade-in")
+  .addTo(controller);

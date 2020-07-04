@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header id="header">
         <nav>
           <svg
             aria-hidden="true"
@@ -32,8 +32,12 @@
           <div class="link why"><a href="#why" class="anchor">Why</a></div>
           <div class="link who"><a href="#who" class="anchor">Who</a></div>
           <div class="link what"><a href="#what" class="anchor">What</a></div>
-          <div class="link where"><a href="#where" class="anchor">Where</a></div>
-          <div class="link contact"><a href="#contact" class="anchor">Contact</a></div>
+          <div class="link where">
+            <a href="#where" class="anchor">Where</a>
+          </div>
+          <div class="link contact">
+            <a href="#contact" class="anchor">Contact</a>
+          </div>
         </nav>
         <h1>BreVery</h1>
       </header>
@@ -69,23 +73,23 @@
         <h2>What</h2>
         <div class="card-beer">
           <h3>Rauchbock</h3>
-          <img src="./img/beer1.jpg" />
-          <p>6%, 16 blg, 25 IBU</p>
+          <img src="./img/beer1.png" />
+          <p>6%<br />16 blg<br />25 IBU</p>
         </div>
         <div class="card-beer">
           <h3>Bohemian Pilsner</h3>
-          <img src="./img/beer2.jpg" />
-          <p>5%, 12 blg, 40 IBU</p>
+          <img src="./img/beer2.png" />
+          <p>5%<br />12 blg<br />40 IBU</p>
         </div>
         <div class="card-beer">
           <h3>Russian Imperial Stout</h3>
-          <img src="./img/beer3.jpg" />
-          <p>11%, 25 blg, 50 IBU</p>
+          <img src="./img/beer3.png" />
+          <p>11%<br />25 blg<br />50 IBU</p>
         </div>
         <div class="card-beer">
           <h3>American Pale Ale</h3>
-          <img src="./img/beer4.jpg" />
-          <p>4,5%, 11 blg, 45 IBU</p>
+          <img src="./img/beer4.png" />
+          <p>4,5%<br />11 blg<br />45 IBU</p>
         </div>
       </div>
       <div class="section where" id="where">
@@ -176,12 +180,14 @@
           <p><span>e-mail</span> yyyyyyyy@gmail.com</p>
           <h3>Send us a message</h3>
           <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" />
-            <label for="email">Email</label>
-            <input type="email" id="email" />
-            <label for="message">Message</label>
-            <input type="textarea" id="message" />
+            <div class="grid">
+              <label for="name">Name</label>
+              <input type="text" id="name" />
+              <label for="email">Email</label>
+              <input type="email" id="email" />
+              <label for="message">Message</label>
+              <input type="textarea" id="message" />
+            </div>
             <button>Send</button>
           </form>
         </div>
@@ -192,6 +198,7 @@
       </footer>
     </div>
 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

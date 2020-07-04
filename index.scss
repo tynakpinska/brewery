@@ -23,7 +23,6 @@ body {
   background-size: cover;
 }
 
-
 .container {
   overflow: scroll;
 }
@@ -38,6 +37,7 @@ header {
   justify-content: center;
   align-items: center;
   transition: all 1s ease-in-out;
+  z-index: 30;
 
   h1 {
     color: $gold;
@@ -104,6 +104,7 @@ header {
       height: 100%;
       text-decoration: none;
       color: $gunmetal;
+      line-height: calc(70vh / 6);
     }
   }
   nav:hover {
@@ -151,6 +152,20 @@ h2 {
     height: auto;
   }
 }
+
+.section {
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: all 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 1s ease-in-out;
+}
+
+
 .person {
   width: 40vw;
   height: 40vw;
@@ -185,7 +200,7 @@ h2 {
 
 .contact {
   h3 {
-    margin-top: 30px;
+    margin: 30px auto 10px auto;
   }
 
   span {
@@ -222,6 +237,14 @@ h2 {
   }
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
 input {
   width: 60vw;
   border-radius: 5px;
@@ -249,17 +272,28 @@ footer {
 
 .card-beer {
   width: 70%;
+  height: 85vh;
   margin: 50px auto;
-  background: #fff;
+  background: $gold;
   border-radius: 50px;
   h3 {
     padding: 40px;
-    background: $gold;
+    background: $white;
   }
   img {
     width: auto;
     max-height: 70vh;
     height: auto;
+    padding-top: 20px;
+    position: relative;
+    left: -20vw;
+  }
+  p {
+    position: relative;
+    top: -50vh;
+    right: -37vw;
+    font-size: 2rem;
+    width: 30vw;
   }
 }
 
