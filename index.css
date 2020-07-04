@@ -27,7 +27,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 30;
 }
 header h1 {
@@ -142,12 +142,6 @@ h2 {
   transition: all 1s ease-in-out;
 }
 
-.fade-in {
-  opacity: 1;
-  transform: translate(0, 0);
-  transition: all 1s ease-in-out;
-}
-
 .person {
   width: 40vw;
   height: 40vw;
@@ -252,6 +246,9 @@ footer p {
   margin: 50px auto;
   background: #cca43b;
   border-radius: 50px;
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: all 1s ease-in-out;
 }
 .card-beer h3 {
   padding: 40px;
@@ -271,6 +268,12 @@ footer p {
   right: -37vw;
   font-size: 2rem;
   width: 30vw;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 0.5s ease-in-out;
 }
 
 @media (min-width: 600px) {
