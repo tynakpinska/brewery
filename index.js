@@ -3,8 +3,7 @@ const header = document.getElementsByTagName("header")[0];
 const links = document.querySelectorAll(".link");
 const exitButton = document.querySelector(".fa-times-circle");
 
-const handleNavClick = e => {
-  console.log(e.target)
+const handleNavClick = () => {
   nav.style.width = "100vw";
   nav.style.height = "85vh";
   nav.children[0].style.display = "block";
@@ -64,25 +63,31 @@ new ScrollMagic.Scene({
   .addTo(controller);
 
 new ScrollMagic.Scene({
-  triggerElement: "#rauchbock",
+  triggerElement: ".rauchbock",
 })
-  .setClassToggle("#rauchbock", "fade-in")
+  .setClassToggle(".rauchbock", "fade-in")
   .addTo(controller);
 
 new ScrollMagic.Scene({
-  triggerElement: "#pilsner",
+  triggerElement: ".pilsner",
 })
-  .setClassToggle("#pilsner", "fade-in")
+  .setClassToggle(".pilsner", "fade-in")
   .addTo(controller);
 
 new ScrollMagic.Scene({
-  triggerElement: "#stout",
+  triggerElement: ".stout",
 })
-  .setClassToggle("#stout", "fade-in")
+  .setClassToggle(".stout", "fade-in")
   .addTo(controller);
 
 new ScrollMagic.Scene({
-  triggerElement: "#ale",
+  triggerElement: ".ale",
 })
-  .setClassToggle("#ale", "fade-in")
+  .setClassToggle(".ale", "fade-in")
   .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: ".person",
+  })
+    .setClassToggle(".person", "grow")
+    .addTo(controller);

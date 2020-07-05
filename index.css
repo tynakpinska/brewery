@@ -64,7 +64,6 @@ header nav .link {
   height: 4px;
   width: 30px;
   background: #cca43b;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,10 +120,6 @@ h2 {
   border-radius: 5px;
 }
 
-.section:not(.what):not(.who) {
-  height: 100vh;
-}
-
 .section-content {
   padding: 30px;
   margin: 10px 0;
@@ -147,21 +142,27 @@ h2 {
   height: 40vw;
   border-radius: 100px;
   margin: 20px auto 0 auto;
+  transform: scale(0.8);
+  transition: all 1s ease-in-out;
 }
 
 .p1 {
-  background: url("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?h=350&auto=compress&cs=tinysrgb") center no-repeat;
+  background: url("./img/p1.jpg") center no-repeat;
   background-size: cover;
 }
 
 .p2 {
-  background: url("https://images.unsplash.com/photo-1504347538039-a53f6ff0131d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=ca7cc3097e24937904aadfe78b36780c") center no-repeat;
+  background: url("./img/p2.jpg") center no-repeat;
   background-size: cover;
 }
 
 .p3 {
-  background: url("https://pbs.twimg.com/profile_images/935681507963887616/yn7PKqTT.jpg") center no-repeat;
+  background: url("./img/p3.jpg") center no-repeat;
   background-size: cover;
+}
+
+.grow {
+  transform: scale(1);
 }
 
 .where h3 {
@@ -241,7 +242,7 @@ footer p {
 }
 
 .card-beer {
-  width: 70%;
+  width: 60%;
   height: 85vh;
   margin: 50px auto;
   background: #cca43b;
@@ -260,20 +261,46 @@ footer p {
   height: auto;
   padding-top: 20px;
   position: relative;
-  left: -20vw;
 }
 .card-beer p {
   position: relative;
   top: -50vh;
-  right: -37vw;
+  left: 25vw;
   font-size: 2rem;
   width: 30vw;
+}
+
+.rauchbock,
+.stout {
+  transform: translate(50px, 0);
+}
+
+.pilsner,
+.ale {
+  transform: translate(-50px, 0);
+}
+
+.pilsner img,
+.rauchbock img {
+  left: -27vw;
+}
+
+.ale img,
+.stout img {
+  left: -30vw;
 }
 
 .fade-in {
   opacity: 1;
   transform: translate(0, 0);
   transition: all 0.5s ease-in-out;
+}
+
+.section::before {
+  content: "";
+  display: block;
+  height: 10vh;
+  margin-top: -10vh;
 }
 
 @media (min-width: 600px) {
