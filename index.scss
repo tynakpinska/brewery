@@ -31,7 +31,6 @@ header {
   position: fixed;
   background: $gunmetal;
   width: 100vw;
-  height: 10vh;
   padding: 8px;
   display: flex;
   justify-content: center;
@@ -114,7 +113,7 @@ header {
 .hero {
   padding: 70px 0;
   background: rgba(204, 164, 59, 0.3);
-  height: 90vh;
+  height: 100vh;
   color: white;
   text-shadow: 0 0 5px $gunmetal;
   font-size: 3rem;
@@ -125,7 +124,7 @@ header {
 
 h2 {
   width: min-content;
-  margin: 30px auto;
+  margin: 20vh auto 10px auto;
   padding: 5px;
   background: rgba(229, 229, 229, 0.6);
   border-radius: 5px;
@@ -152,12 +151,13 @@ h2 {
   opacity: 0;
   transform: translate(0, 30px);
   transition: all 1s ease-in-out;
+  padding-top: 20px;
 }
 
 .person {
   width: 40vw;
   height: 40vw;
-  border-radius: 100px;
+  border-radius: 300px;
   margin: 20px auto 0 auto;
   transform: scale(.8);
   transition: all 1s ease-in-out;
@@ -182,11 +182,21 @@ h2 {
 
 .where {
   h3 {
-    border-top: 3px solid $rose;
     width: 50vw;
     margin: 10px auto 2px auto;
     padding: 10px 0 0 0;
   }
+  .line {
+    height: 3px;
+    width: 10px;
+    background: $rose;
+    margin: 10px auto -5px auto;
+    transition: all 1s ease-in-out;
+  }
+}
+
+.longer {
+  transform: scaleX(20);
 }
 
 .contact {
@@ -206,7 +216,7 @@ h2 {
     color: $gold;
     font-weight: bolder;
     border-radius: 10px;
-    margin: 5px;
+    margin: 15px 0 20px 0;
     padding: 5px;
     cursor: pointer;
   }
@@ -270,6 +280,7 @@ footer {
   opacity: 0;
   transform: translate(0, 30px);
   transition: all 1s ease-in-out;
+  position: relative;
   h3 {
     padding: 40px;
     background: $white;
@@ -278,15 +289,14 @@ footer {
     width: auto;
     max-height: 70vh;
     height: auto;
-    padding-top: 20px;
     position: relative;
   }
   p {
     position: relative;
     top: -50vh;
-    left: 25vw;
+    left: 20%;
     font-size: 2rem;
-    width: 30vw;
+    width: 100%;
   }
 }
 
@@ -307,6 +317,7 @@ footer {
 
 .ale img,
 .stout img {
+  top: -25px;
   left: -30vw;
 }
 
@@ -320,7 +331,7 @@ footer {
   content: "";
   display: block;
   height: 10vh;
-  margin-top: -10vh;
+  margin-top: -15vh;
 }
 
 @media (min-width: 600px) {

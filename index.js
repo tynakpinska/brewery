@@ -1,9 +1,10 @@
 const nav = document.getElementsByTagName("nav")[0];
 const header = document.getElementsByTagName("header")[0];
 const links = document.querySelectorAll(".link");
+const anchors = document.querySelectorAll(".anchor");
 const exitButton = document.querySelector(".fa-times-circle");
 
-const handleNavClick = () => {
+const handleNavClick = e => {
   nav.style.width = "100vw";
   nav.style.height = "85vh";
   nav.children[0].style.display = "block";
@@ -28,7 +29,7 @@ const handleExitClick = e => {
 
 nav.addEventListener("click", handleNavClick);
 exitButton.addEventListener("click", handleExitClick);
-links.forEach(l => l.addEventListener("click", handleExitClick));
+anchors.forEach(a => a.addEventListener("click", handleExitClick));
 
 const controller = new ScrollMagic.Controller();
 
@@ -86,8 +87,14 @@ new ScrollMagic.Scene({
   .setClassToggle(".ale", "fade-in")
   .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: ".person",
-  })
-    .setClassToggle(".person", "grow")
-    .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: ".person",
+})
+  .setClassToggle(".person", "grow")
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: ".line",
+})
+  .setClassToggle(".line", "longer")
+  .addTo(controller);

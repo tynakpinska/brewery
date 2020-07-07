@@ -22,7 +22,6 @@ header {
   position: fixed;
   background: #242f40;
   width: 100vw;
-  height: 10vh;
   padding: 8px;
   display: flex;
   justify-content: center;
@@ -103,7 +102,7 @@ header nav:hover {
 .hero {
   padding: 70px 0;
   background: rgba(204, 164, 59, 0.3);
-  height: 90vh;
+  height: 100vh;
   color: white;
   text-shadow: 0 0 5px #242f40;
   font-size: 3rem;
@@ -114,7 +113,7 @@ header nav:hover {
 
 h2 {
   width: min-content;
-  margin: 30px auto;
+  margin: 20vh auto 10px auto;
   padding: 5px;
   background: rgba(229, 229, 229, 0.6);
   border-radius: 5px;
@@ -135,12 +134,13 @@ h2 {
   opacity: 0;
   transform: translate(0, 30px);
   transition: all 1s ease-in-out;
+  padding-top: 20px;
 }
 
 .person {
   width: 40vw;
   height: 40vw;
-  border-radius: 100px;
+  border-radius: 300px;
   margin: 20px auto 0 auto;
   transform: scale(0.8);
   transition: all 1s ease-in-out;
@@ -166,10 +166,20 @@ h2 {
 }
 
 .where h3 {
-  border-top: 3px solid #cc3165;
   width: 50vw;
   margin: 10px auto 2px auto;
   padding: 10px 0 0 0;
+}
+.where .line {
+  height: 3px;
+  width: 10px;
+  background: #cc3165;
+  margin: 10px auto -5px auto;
+  transition: all 1s ease-in-out;
+}
+
+.longer {
+  transform: scaleX(20);
 }
 
 .contact h3 {
@@ -187,7 +197,7 @@ h2 {
   color: #cca43b;
   font-weight: bolder;
   border-radius: 10px;
-  margin: 5px;
+  margin: 15px 0 20px 0;
   padding: 5px;
   cursor: pointer;
 }
@@ -250,6 +260,7 @@ footer p {
   opacity: 0;
   transform: translate(0, 30px);
   transition: all 1s ease-in-out;
+  position: relative;
 }
 .card-beer h3 {
   padding: 40px;
@@ -259,15 +270,14 @@ footer p {
   width: auto;
   max-height: 70vh;
   height: auto;
-  padding-top: 20px;
   position: relative;
 }
 .card-beer p {
   position: relative;
   top: -50vh;
-  left: 25vw;
+  left: 20%;
   font-size: 2rem;
-  width: 30vw;
+  width: 100%;
 }
 
 .rauchbock,
@@ -287,6 +297,7 @@ footer p {
 
 .ale img,
 .stout img {
+  top: -25px;
   left: -30vw;
 }
 
@@ -300,7 +311,7 @@ footer p {
   content: "";
   display: block;
   height: 10vh;
-  margin-top: -10vh;
+  margin-top: -15vh;
 }
 
 @media (min-width: 600px) {
