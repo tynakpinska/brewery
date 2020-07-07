@@ -190,15 +190,14 @@ h2 {
 }
 .contact button {
   background: #cc3165;
-  border-top: 2px solid #c99eac;
-  border-left: 2px solid #c99eac;
-  border-bottom: 2px solid #c70948;
-  border-right: 2px solid #c70948;
+  border: 2px solid #c70948;
   color: #cca43b;
   font-weight: bolder;
-  border-radius: 10px;
+  border-radius: 30px;
   margin: 15px 0 20px 0;
-  padding: 5px;
+  padding: 10px;
+  font-family: "Rokkitt", serif;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 .contact .contact-icons {
@@ -228,9 +227,10 @@ h2 {
 
 input {
   width: 60vw;
-  border-radius: 5px;
+  border-radius: 30px;
   background: #e5e5e5;
   margin: 3px auto;
+  border: 2px solid #363636;
 }
 
 input[type=textarea] {
@@ -314,10 +314,47 @@ footer p {
   margin-top: -15vh;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 576px) {
   body {
     background: url("./img/background.jpg") no-repeat center center fixed;
     background-size: cover;
+  }
+}
+@media (min-width: 768px) {
+  header nav svg {
+    left: 30px;
+  }
+
+  .hero p {
+    padding: 50px;
+  }
+
+  .section p {
+    font-size: 1.2rem;
+  }
+
+  .person {
+    transform: scale(0.5);
+  }
+
+  .grow {
+    transform: scale(0.8);
+  }
+
+  .who .section-content {
+    padding-bottom: 100px;
+  }
+
+  .card-beer p {
+    font-size: 3rem;
+  }
+
+  .contact-icons {
+    padding-top: 20px;
+  }
+
+  footer p {
+    font-size: 1.2rem;
   }
 }
 
