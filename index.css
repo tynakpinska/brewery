@@ -151,6 +151,7 @@ h2 {
   border-radius: 300px;
   transform: scale(0.8);
   transition: all 1s ease-in-out;
+  margin: auto;
 }
 
 .p1 {
@@ -260,7 +261,7 @@ footer p {
 }
 
 .card-beer {
-  width: 50%;
+  width: 53%;
   height: 85vh;
   margin: 50px auto;
   background: #cca43b;
