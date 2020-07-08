@@ -5,24 +5,20 @@ const anchors = document.querySelectorAll(".anchor");
 const exitButton = document.querySelector(".fa-times-circle");
 
 const handleNavClick = e => {
-  nav.style.width = "100vw";
-  nav.style.height = "85vh";
+  nav.classList.add("menu");
   nav.children[0].style.display = "block";
   nav.children[0].style.position = "absolute";
   links.forEach(l => {
-    l.style.width = "93vw";
-    l.style.height = "calc(70vh/6)";
+    l.classList.add("big")
     l.children[0].style.display = "block";
   });
 };
 const handleExitClick = e => {
   e.stopPropagation();
-  nav.style.width = "auto";
-  nav.style.height = "100%";
+  nav.classList.remove("menu");
   nav.children[0].style.display = "none";
   links.forEach(l => {
-    l.style.width = "30px";
-    l.style.height = "4px";
+    l.classList.remove("big")
     l.children[0].style.display = "none";
   });
 };
@@ -88,9 +84,9 @@ new ScrollMagic.Scene({
   .addTo(controller);
 
 new ScrollMagic.Scene({
-  triggerElement: ".person",
+  triggerElement: ".picture",
 })
-  .setClassToggle(".person", "grow")
+  .setClassToggle(".picture", "grow")
   .addTo(controller);
 
 new ScrollMagic.Scene({

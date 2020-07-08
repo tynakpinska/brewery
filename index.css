@@ -38,7 +38,6 @@ header nav {
   position: absolute;
   left: 0;
   top: 0;
-  width: auto;
   height: 100%;
   padding: 8px;
   overflow: hidden;
@@ -67,6 +66,10 @@ header nav .link {
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease-in-out;
+}
+header nav .big {
+  width: 93vw;
+  height: calc(70vh / 6);
 }
 header nav .home {
   background: #ffef3d;
@@ -97,6 +100,11 @@ header nav a {
 }
 header nav:hover {
   border-radius: 10px;
+}
+
+.menu {
+  width: 100vw;
+  height: 85vh;
 }
 
 .hero {
@@ -137,11 +145,10 @@ h2 {
   padding-top: 20px;
 }
 
-.person {
+.picture {
   width: 40vw;
   height: 40vw;
   border-radius: 300px;
-  margin: 20px auto 0 auto;
   transform: scale(0.8);
   transition: all 1s ease-in-out;
 }
@@ -227,6 +234,7 @@ h2 {
 
 input {
   width: 60vw;
+  height: 25px;
   border-radius: 30px;
   background: #e5e5e5;
   margin: 3px auto;
@@ -252,7 +260,7 @@ footer p {
 }
 
 .card-beer {
-  width: 60%;
+  width: 50%;
   height: 85vh;
   margin: 50px auto;
   background: #cca43b;
@@ -263,7 +271,7 @@ footer p {
   position: relative;
 }
 .card-beer h3 {
-  padding: 40px;
+  padding: 30px;
   background: white;
 }
 .card-beer img {
@@ -275,7 +283,7 @@ footer p {
 .card-beer p {
   position: relative;
   top: -50vh;
-  left: 20%;
+  left: 15%;
   font-size: 2rem;
   width: 100%;
 }
@@ -288,6 +296,10 @@ footer p {
 .pilsner,
 .ale {
   transform: translate(-50px, 0);
+}
+
+.pilsner p {
+  left: 22%;
 }
 
 .pilsner img,
@@ -314,6 +326,35 @@ footer p {
   margin-top: -15vh;
 }
 
+@media (max-height: 500px) {
+  .picture {
+    transform: scale(0.6);
+  }
+
+  .grow {
+    transform: scale(0.8);
+  }
+
+  .card-beer {
+    height: 50vh;
+    border-radius: 0 0 50px 50px;
+  }
+  .card-beer h3 {
+    padding: 5px;
+  }
+  .card-beer p {
+    top: -46vh;
+    left: 5%;
+  }
+  .card-beer img {
+    height: 50vh;
+    width: auto;
+  }
+
+  .who .section-content {
+    padding-bottom: 90px;
+  }
+}
 @media (min-width: 576px) {
   body {
     background: url("./img/background.jpg") no-repeat center center fixed;
@@ -324,6 +365,19 @@ footer p {
   header nav svg {
     left: 30px;
   }
+  header nav .big {
+    width: 95%;
+    height: calc(40vh / 6);
+  }
+  header nav a {
+    font-size: 1.7rem;
+    line-height: 230%;
+  }
+
+  .menu {
+    width: 50vw;
+    height: 50vh;
+  }
 
   .hero p {
     padding: 50px;
@@ -333,7 +387,7 @@ footer p {
     font-size: 1.2rem;
   }
 
-  .person {
+  .picture {
     transform: scale(0.5);
   }
 
@@ -345,8 +399,28 @@ footer p {
     padding-bottom: 100px;
   }
 
+  .where .section-content {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+  }
+  .where .section-content .line {
+    width: 3px;
+    height: 50px;
+  }
+  .where .section-content .longer {
+    transform: scaleY(4);
+  }
+  .where .section-content h3 {
+    width: auto;
+  }
+  .where .section-content h4 {
+    margin: 10px;
+  }
+
   .card-beer p {
     font-size: 3rem;
+    left: 10%;
   }
 
   .contact-icons {
@@ -355,6 +429,49 @@ footer p {
 
   footer p {
     font-size: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .beers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-beer {
+    width: 40%;
+    height: 50vh;
+  }
+  .card-beer p {
+    font-size: 2rem;
+    top: -30vh;
+  }
+  .card-beer img {
+    height: 40vh;
+    top: -5vh;
+    left: -12vw;
+  }
+
+  .who .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+  }
+  .who .section-content .person {
+    width: 33%;
+  }
+  .who .section-content .person .picture {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  .grid {
+    margin: 0 auto;
+  }
+  .grid input {
+    width: 30vw;
   }
 }
 
