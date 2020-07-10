@@ -220,6 +220,59 @@ h2 {
   content: url("./img/beer4-small.png");
 }
 
+.card-beer {
+  width: 53%;
+  height: 85vh;
+  margin: 50px auto;
+  background: #cca43b;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+.card-beer h3 {
+  padding: 30px;
+  background: white;
+}
+.card-beer img {
+  width: auto;
+  height: 60vh;
+  z-index: 10;
+  position: relative;
+  left: -20vw;
+  transition: all 0.3s ease-in;
+}
+.card-beer img:hover {
+  transform: rotate(-10deg) scale(1.1);
+}
+.card-beer p {
+  position: relative;
+  top: -45vh;
+  left: 15%;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.rauchbock,
+.stout {
+  transform: translate(50px, 0);
+}
+
+.pilsner,
+.ale {
+  transform: translate(-50px, 0);
+}
+
+.pilsner p {
+  left: 26%;
+  font-size: 1.6rem;
+}
+
+.rauchbock p {
+  left: 22%;
+}
+
 .contact h3 {
   margin: 30px auto 10px auto;
 }
@@ -237,6 +290,9 @@ h2 {
   font-family: "Rokkitt", serif;
   font-size: 1.1rem;
   cursor: pointer;
+}
+.contact button:hover {
+  background: #c70948;
 }
 .contact .contact-icons {
   margin: 10px;
@@ -289,60 +345,6 @@ footer p {
   margin: 0;
   background: none;
   margin-bottom: 0;
-}
-
-.card-beer {
-  width: 53%;
-  height: 85vh;
-  margin: 50px auto;
-  background: #cca43b;
-  border-radius: 50px;
-  opacity: 0;
-  transform: translate(0, 30px);
-  transition: all 1s ease-in-out;
-  position: relative;
-}
-.card-beer h3 {
-  padding: 30px;
-  background: white;
-}
-.card-beer img {
-  width: auto;
-  max-height: 70vh;
-  height: auto;
-  position: relative;
-}
-.card-beer p {
-  position: relative;
-  top: -50vh;
-  left: 15%;
-  font-size: 2rem;
-  width: 100%;
-}
-
-.rauchbock,
-.stout {
-  transform: translate(50px, 0);
-}
-
-.pilsner,
-.ale {
-  transform: translate(-50px, 0);
-}
-
-.pilsner p {
-  left: 22%;
-}
-
-.pilsner img,
-.rauchbock img {
-  left: -27vw;
-}
-
-.ale img,
-.stout img {
-  top: -25px;
-  left: -30vw;
 }
 
 .fade-in {
@@ -482,18 +484,6 @@ footer p {
     position: relative;
     left: 2vw;
   }
-  .container .beer1 {
-    content: url("./img/beer1.png");
-  }
-  .container .beer2 {
-    content: url("./img/beer2.png");
-  }
-  .container .beer3 {
-    content: url("./img/beer3.png");
-  }
-  .container .beer4 {
-    content: url("./img/beer4.png");
-  }
   .container .card-beer {
     width: 40%;
     height: 50vh;
@@ -506,6 +496,18 @@ footer p {
     height: 40vh;
     top: -5vh;
     left: -12vw;
+  }
+  .container .card-beer .beer1 {
+    content: url("./img/beer1.png");
+  }
+  .container .card-beer .beer2 {
+    content: url("./img/beer2.png");
+  }
+  .container .card-beer .beer3 {
+    content: url("./img/beer3.png");
+  }
+  .container .card-beer .beer4 {
+    content: url("./img/beer4.png");
   }
   .container .who .section-content {
     display: flex;

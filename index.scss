@@ -228,6 +228,59 @@ h2 {
   content: url("./img/beer4-small.png");
 }
 
+.card-beer {
+  width: 53%;
+  height: 85vh;
+  margin: 50px auto;
+  background: $gold;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: all 1s ease-in-out;
+  position: relative;
+  h3 {
+    padding: 30px;
+    background: $white;
+  }
+  img {
+    width: auto;
+    height: 60vh;
+    z-index: 10;
+    position: relative;
+    left: -20vw;
+    transition: all .3s ease-in;
+    &:hover {
+      transform: rotate(-10deg) scale(1.1);
+    }
+  }
+  p {
+    position: relative;
+    top: -45vh;
+    left: 15%;
+    font-size: 1.8rem;
+    width: 100%;
+  }
+}
+
+.rauchbock,
+.stout {
+  transform: translate(50px, 0);
+}
+
+.pilsner,
+.ale {
+  transform: translate(-50px, 0);
+}
+
+.pilsner p {
+  left: 26%;
+  font-size: 1.6rem;
+}
+
+.rauchbock p {
+  left: 22%;
+}
+
 .contact {
   h3 {
     margin: 30px auto 10px auto;
@@ -247,6 +300,9 @@ h2 {
     font-family: $main-font;
     font-size: 1.1rem;
     cursor: pointer;
+    &:hover {
+      background: #c70948;
+    }
   }
   .contact-icons {
     margin: 10px;
@@ -300,60 +356,6 @@ footer {
     background: none;
     margin-bottom: 0;
   }
-}
-
-.card-beer {
-  width: 53%;
-  height: 85vh;
-  margin: 50px auto;
-  background: $gold;
-  border-radius: 50px;
-  opacity: 0;
-  transform: translate(0, 30px);
-  transition: all 1s ease-in-out;
-  position: relative;
-  h3 {
-    padding: 30px;
-    background: $white;
-  }
-  img {
-    width: auto;
-    max-height: 70vh;
-    height: auto;
-    position: relative;
-  }
-  p {
-    position: relative;
-    top: -50vh;
-    left: 15%;
-    font-size: 2rem;
-    width: 100%;
-  }
-}
-
-.rauchbock,
-.stout {
-  transform: translate(50px, 0);
-}
-
-.pilsner,
-.ale {
-  transform: translate(-50px, 0);
-}
-
-.pilsner p {
-  left: 22%;
-}
-
-.pilsner img,
-.rauchbock img {
-  left: -27vw;
-}
-
-.ale img,
-.stout img {
-  top: -25px;
-  left: -30vw;
 }
 
 .fade-in {
@@ -495,18 +497,7 @@ footer {
       position: relative;
       left: 2vw;
     }
-    .beer1 {
-      content: url("./img/beer1.png");
-    }
-    .beer2 {
-      content: url("./img/beer2.png");
-    }
-    .beer3 {
-      content: url("./img/beer3.png");
-    }
-    .beer4 {
-      content: url("./img/beer4.png");
-    }
+
     .card-beer {
       width: 40%;
       height: 50vh;
@@ -518,6 +509,18 @@ footer {
         height: 40vh;
         top: -5vh;
         left: -12vw;
+      }
+      .beer1 {
+        content: url("./img/beer1.png");
+      }
+      .beer2 {
+        content: url("./img/beer2.png");
+      }
+      .beer3 {
+        content: url("./img/beer3.png");
+      }
+      .beer4 {
+        content: url("./img/beer4.png");
       }
     }
     .who {
