@@ -4,12 +4,22 @@ const links = document.querySelectorAll(".link");
 const anchors = document.querySelectorAll(".anchor");
 const exitButton = document.querySelector(".fa-times-circle");
 
+const ids = ["#home", "#why", "#who", "#what", "#where", "#contact"];
+
+ids.forEach(i => {
+  if (window.location.href.indexOf("#home") != -1) {
+    window.onload = () => {
+      window.location.hash = "#home";
+    };
+  }
+});
+
 const handleNavClick = e => {
   nav.classList.add("menu");
   nav.children[0].style.display = "block";
   nav.children[0].style.position = "absolute";
   links.forEach(l => {
-    l.classList.add("big")
+    l.classList.add("big");
     l.children[0].style.display = "block";
   });
 };
@@ -18,7 +28,7 @@ const handleExitClick = e => {
   nav.classList.remove("menu");
   nav.children[0].style.display = "none";
   links.forEach(l => {
-    l.classList.remove("big")
+    l.classList.remove("big");
     l.children[0].style.display = "none";
   });
 };
