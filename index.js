@@ -90,7 +90,7 @@ new ScrollMagic.Scene({
   .addTo(controller);
 
 new ScrollMagic.Scene({
-  triggerElement: ".line",
+  triggerElement: "#where",
 })
   .setClassToggle(".line", "longer")
   .addTo(controller);
