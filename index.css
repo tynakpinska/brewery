@@ -22,6 +22,8 @@ body {
 
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   background: #242f40;
   width: 100vw;
   padding: 15px;
@@ -40,7 +42,7 @@ header nav {
   left: 0;
   top: 0;
   height: 100%;
-  padding: 8px;
+  padding: 7px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -126,9 +128,10 @@ h2 {
 }
 
 .section-content {
+  max-width: 100vw;
   padding: 30px;
   margin: 10px 0;
-  background: linear-gradient(rgba(204, 164, 59, 0), #cca43b 7%, #cca43b 93%, rgba(204, 164, 59, 0));
+  background: #cca43b;
 }
 .section-content img {
   margin: 5px;
@@ -137,6 +140,7 @@ h2 {
 }
 
 .section {
+  max-width: 100%;
   opacity: 0;
   transform: translate(0, 30px);
   transition: all 1s ease-in-out;
@@ -275,6 +279,7 @@ input[type=textarea] {
 }
 
 footer {
+  width: 100vw;
   background: #242f40;
   color: #cca43b;
   padding: 10px;
@@ -459,62 +464,84 @@ footer p {
   }
 }
 @media (min-width: 1024px) {
-  .beers {
+  body {
+    background-position: left;
+    background-size: contain;
+  }
+
+  .container {
+    background: #f0ddae;
+    width: 60vw;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+  }
+  .container .beers {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    left: 2vw;
   }
-
-  .beer1 {
+  .container .beer1 {
     content: url("./img/beer1.png");
   }
-
-  .beer2 {
+  .container .beer2 {
     content: url("./img/beer2.png");
   }
-
-  .beer3 {
+  .container .beer3 {
     content: url("./img/beer3.png");
   }
-
-  .beer4 {
+  .container .beer4 {
     content: url("./img/beer4.png");
   }
-
-  .card-beer {
+  .container .card-beer {
     width: 40%;
     height: 50vh;
   }
-  .card-beer p {
+  .container .card-beer p {
     font-size: 2rem;
     top: -30vh;
   }
-  .card-beer img {
+  .container .card-beer img {
     height: 40vh;
     top: -5vh;
     left: -12vw;
   }
-
-  .who .section-content {
+  .container .who .section-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-bottom: 60px;
   }
-  .who .section-content .person {
+  .container .who .section-content .person {
     width: 33%;
   }
-  .who .section-content .person .picture {
+  .container .who .section-content .person .picture {
     margin: 0 auto;
     width: 300px;
     height: 300px;
   }
-
-  .grid {
+  .container .grid {
     margin: 0 auto;
   }
-  .grid input {
+  .container .grid input {
     width: 30vw;
+  }
+  .container .where .section-content {
+    padding: 15px;
+    width: 100%;
+  }
+  .container .where .section-content iframe {
+    width: 15vw;
+  }
+  .container .where .section-content .longer {
+    transform: scaleY(12) translateY(2.5vh);
+  }
+  .container footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
   }
 }
 
