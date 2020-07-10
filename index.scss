@@ -339,13 +339,6 @@ footer {
   transition: all 0.5s ease-in-out;
 }
 
-.section::before {
-  content: "";
-  display: block;
-  height: 10vh;
-  margin-top: -15vh;
-}
-
 @media (max-height: 500px) {
   .picture {
     transform: scale(0.6);
