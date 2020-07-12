@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  overflow: scroll;
+  overflow: hidden;
 }
 
 header {
@@ -179,6 +179,7 @@ h2 {
   width: 60vw;
   margin: 10px auto 2px auto;
   padding: 10px 0 0 0;
+  border-bottom: 2px solid #363636;
 }
 .where p {
   line-height: 1.3rem;
@@ -190,7 +191,7 @@ h2 {
   height: 3px;
   width: 10px;
   background: #cc3165;
-  margin: 10px auto -5px auto;
+  margin: 10px 1vw -5px 1vw;
   transition: all 1s ease-in-out;
 }
 .where iframe {
@@ -326,9 +327,10 @@ input {
   background: #e5e5e5;
   margin: 3px auto;
   border: 2px solid #363636;
+  padding: 5px;
 }
 
-input[type=textarea] {
+input[type="textarea"] {
   width: 100%;
   height: 30vh;
   margin: auto;
@@ -428,6 +430,7 @@ footer p {
 
   .where .section-content {
     display: flex;
+    justify-content: space-around;
     align-items: start;
     width: 100vw;
     padding: 50px 15px;
@@ -437,19 +440,22 @@ footer p {
     height: 50px;
     transform: translateY(1vh);
     transition: all 5s ease-in-out;
+    align-self: center;
   }
   .where .section-content .longer {
-    transform: scaleY(12) translateY(3vh);
+    transform: scaleY(13);
   }
   .where .section-content h3 {
     width: auto;
     padding: 20px 5px;
+    margin-bottom: 15px;
   }
   .where .section-content h4 {
     margin: 10px;
   }
   .where .section-content iframe {
     width: 28vw;
+    height: 35vh;
   }
 
   .card-beer p {
@@ -467,80 +473,90 @@ footer p {
 }
 @media (min-width: 1024px) {
   body {
-    background-position: left;
-    background-size: contain;
+    background: url("./img/background-landscape.jpg") no-repeat center center
+      fixed;
+    background-size: cover;
   }
 
-  .container {
-    background: #f0ddae;
-    width: 60vw;
-    position: absolute;
-    right: 0;
-    overflow: hidden;
-  }
-  .container .beers {
+  .beers {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     left: 2vw;
   }
-  .container .card-beer {
+
+  .card-beer {
     width: 40%;
     height: 50vh;
   }
-  .container .card-beer p {
+  .card-beer p {
     font-size: 2rem;
     top: -30vh;
   }
-  .container .card-beer img {
+  .card-beer img {
     height: 40vh;
     top: -5vh;
     left: -12vw;
   }
-  .container .card-beer .beer1 {
+  .card-beer .beer1 {
     content: url("./img/beer1.png");
   }
-  .container .card-beer .beer2 {
+  .card-beer .beer2 {
     content: url("./img/beer2.png");
   }
-  .container .card-beer .beer3 {
+  .card-beer .beer3 {
     content: url("./img/beer3.png");
   }
-  .container .card-beer .beer4 {
+  .card-beer .beer4 {
     content: url("./img/beer4.png");
   }
-  .container .who .section-content {
+
+  .who .section-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-bottom: 60px;
   }
-  .container .who .section-content .person {
+  .who .section-content .person {
     width: 33%;
   }
-  .container .who .section-content .person .picture {
+  .who .section-content .person .picture {
     margin: 0 auto;
     width: 300px;
     height: 300px;
   }
-  .container .grid {
+
+  .grid {
     margin: 0 auto;
   }
-  .container .grid input {
+  .grid input {
     width: 30vw;
   }
-  .container .where .section-content {
+
+  .where .section-content {
+    margin: 0 auto;
     padding: 15px;
-    width: 100%;
   }
-  .container .where .section-content iframe {
+  .where .section-content iframe {
     width: 15vw;
+    height: 30vh;
   }
-  .container .where .section-content .longer {
-    transform: scaleY(12) translateY(2.5vh);
+  .where .section-content .longer {
+    transform: scaleY(12);
   }
-  .container footer {
+
+  .where .section-content > * {
+    margin: 0 auto;
+  }
+
+  .contact .section-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer {
     position: fixed;
     bottom: 0;
     left: 0;
