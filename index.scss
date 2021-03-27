@@ -30,6 +30,11 @@ body {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: $gunmetal;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -46,6 +51,7 @@ header {
     color: $gold;
     font-family: $logo-font;
   }
+
   nav {
     background: $gunmetal;
     position: absolute;
@@ -102,8 +108,6 @@ header {
       display: none;
       font-size: 2rem;
       width: 100%;
-      text-decoration: none;
-      color: $gunmetal;
     }
   }
   nav:hover {
@@ -516,14 +520,13 @@ footer {
     background-size: cover;
     background-position: 0% 50%;
   }
-.hero {
-  .video-wrapper {
-    width: 100vw;
-    margin-left: 0;
-    margin-top: 6vh;
+  .hero {
+    .video-wrapper {
+      width: 100vw;
+      margin-left: 0;
+      margin-top: 6vh;
+    }
   }
-
-}
 
   .beers {
     display: flex;
@@ -588,7 +591,7 @@ footer {
       height: 30vh;
     }
     .longer {
-      transform: scaleY(13) translateY(.2vh);
+      transform: scaleY(13) translateY(0.2vh);
     }
   }
   .where .section-content > * {

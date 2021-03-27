@@ -21,6 +21,11 @@ body {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: #242f40;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -94,8 +99,6 @@ header nav a {
   display: none;
   font-size: 2rem;
   width: 100%;
-  text-decoration: none;
-  color: #242f40;
 }
 header nav:hover {
   border-radius: 10px;
